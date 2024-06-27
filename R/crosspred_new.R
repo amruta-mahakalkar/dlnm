@@ -110,7 +110,7 @@ crosspred_new <-
                     length(predlag)) 
     #
     # NAMES
-    rownames(matfit) <- rownames(matse) <- predvar
+    rownames(matfit) <- rownames(matse) <- round(as.numeric(predvar), digits = 2)
     colnames(matfit) <- colnames(matse) <- outer("lag",predlag,paste,sep="")
     #
     ################################################################################
